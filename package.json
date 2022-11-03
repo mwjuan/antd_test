@@ -1,0 +1,71 @@
+{
+  "name": "auto_test_helloword",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^13.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "antd": "^4.23.4",
+    "axios": "^0.19.2",
+    "lodash": "^4.17.21",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.0"
+  },
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "jest --coverage --colors --silent",
+    "eject": "craco eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "babel": {
+    "plugins": [
+      [
+        "@babel/plugin-proposal-decorators",
+        {
+          "legacy": true
+        }
+      ]
+    ],
+    "presets": [
+      "react-app"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.6",
+    "@babel/plugin-proposal-decorators": "^7.19.3",
+    "@babel/preset-env": "^7.19.4",
+    "@craco/craco": "^6.4.5",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^29.1.2",
+    "babel-preset-react": "^6.24.1",
+    "craco-less": "^2.0.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "jest": "^29.1.2",
+    "jest-environment-jsdom": "^29.1.2",
+    "jsdom": "^20.0.1",
+    "regenerator-runtime": "^0.13.9"
+  }
+}
