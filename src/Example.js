@@ -9,6 +9,7 @@ import {
 import { Input, Button, Select, Table, Form, Modal, Layout, Menu, Radio } from 'antd';
 import _ from 'lodash';
 import TransportLayer from './TransportLayer.js';
+import AreaRoomTree from './components/AreaRoomTree';
 
 const { Option } = Select;
 const { Header, Sider, Content } = Layout;
@@ -42,6 +43,10 @@ function Example(props) {
             render: (e) => e ? '女' : '男'
         }
     ];
+
+    const onChange = (space) => {
+
+    }
 
     return (
         <Layout style={{ height: '100vh' }}>
@@ -97,6 +102,7 @@ function Example(props) {
                                 <Option value={false}>男</Option>
                                 <Option value={true}>女</Option>
                             </Select>
+                            <AreaRoomTree style={{ width: 300 }} treeCheckable={true} onChange={(space) => onChange(space)} />
                         </div>
                         <Button className='add-button' type='primary' onClick={() => setVisible(true)}>新建人员</Button>
                     </div>
@@ -230,8 +236,8 @@ let hoc = (WrappedComponent) => {
 
         getMessage = async () => {
             try {
-               let result = await TransportLayer.instance.getMessage();
-               return result.code;
+                let result = await TransportLayer.instance.getMessage();
+                return result.code;
             } catch (error) {
                 console.log(error)
                 return -1;
