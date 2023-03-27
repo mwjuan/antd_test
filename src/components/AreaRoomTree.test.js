@@ -59,25 +59,14 @@ describe('AreaRoomTree 组件测试', () => {
     })
 
     it('6. 异步测试', async () => {
-        // console.log(1, new Date())
-        // jest.useFakeTimers()
-        // delay(() => {
-        //     //等待定时器一定时间后调用delay函数执行
-        //     // done()
-        //     console.log(2, new Date())
-        // })
-        // //.runAllTimers()在调用完成后，拨快时钟
-        // jest.runAllTimers()
-        // console.log(3, new Date())
-
         let mockFn = jest.fn()
-        console.log(mockFn)
         jest.useFakeTimers()
         delay(() => {
+            //等待定时器一定时间后调用delay函数执行
             mockFn()
             // done()
         })
-        jest.runAllTimers()
+        jest.runAllTimers() //在调用完成后，拨快时钟
         expect(true).toBe(true)
         //断言mockFn是否被断言
         expect(mockFn).toBeCalled()
